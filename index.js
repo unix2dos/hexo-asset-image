@@ -40,7 +40,7 @@ hexo.extend.filter.register('after_post_render', function(data){
         if ($(this).attr('src')){
           // For windows style path, we replace '\' to '/'.
           var src = $(this).attr('src').replace('\\', '/');
-          if(!(/http[s]*.*|\/\/.*/.test(src)
+          if(!(/^http[s]*.*|\/\/.*/.test(src)
             || /^\s+\//.test(src)
             || /^\s*\/uploads|images\//.test(src))) {
             // For "about" page, the first part of "src" can't be removed.
